@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AGT System - Universal System of Global Governance & Planning</title>
+    <style>
+        /*
+        Color Palette:
+        - Dark Blue: #1a237e (Deep background)
+        - Brilliant Blue: #188ade (Accent/Primary Buttons)
+        - White: #ffffff (Text/Card Backgrounds)
+        - Light Background: #e8eaf6 (App background)
+        - Accent Yellow: #ffc107 (Specific button highlight)
+        - Accent Red: #d32f2f (Specific button highlight)
+        */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e8eaf6; /* Light App background */
+            color: #ffffff;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #1a237e 0%, #188ade 100%);
+            padding: 20px 15px 10px;
+            text-align: center;
+        }
+
+        .header h1 {
+            margin: 0 0 5px;
+            font-size: 24px;
+            color: #ffffff;
+        }
+
+        .header p {
+            margin: 0;
+            font-size: 14px;
+            color: #cccccc;
+        }
+
+        .system-status {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 10px 15px;
+            background-color: #1a237e; /* Dark Blue Container */
+        }
+
+        .status-card {
+            background-color: #3f51b5; /* Slightly lighter dark blue for cards */
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 10px;
+            width: calc(50% - 10px);
+            box-sizing: border-box;
+            text-align: left;
+        }
+
+        .status-card strong {
+            display: block;
+            font-size: 28px;
+            font-weight: bold;
+            color: #188ade; /* Brilliant Blue for numbers */
+        }
+
+        .status-card span {
+            font-size: 14px;
+            color: #ffffff;
+        }
+
+        .content-area {
+            padding: 15px;
+            background-color: #1a237e;
+        }
+
+        .nav-tabs {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #3f51b5;
+        }
+
+        .nav-tab {
+            flex-grow: 1;
+            padding: 10px 5px;
+            text-align: center;
+            font-size: 12px;
+            cursor: pointer;
+            background-color: #3f51b5;
+            color: #ffffff;
+            border-radius: 5px 5px 0 0;
+            margin-right: 2px;
+            margin-bottom: 2px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-tab.active {
+            background-color: #188ade; /* Brilliant Blue active tab */
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        .system-section {
+            background-color: #ffffff; /* White card background */
+            border-radius: 8px;
+            padding: 20px;
+            color: #1a237e; /* Dark Blue text on white background */
+        }
+
+        h2 {
+            font-size: 18px;
+            color: #188ade; /* Brilliant Blue heading */
+            margin-top: 0;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 5px;
+        }
+
+        .subsystem-list li {
+            font-size: 14px;
+            margin-bottom: 8px;
+            color: #1a237e;
+        }
+
+        input[type="text"], select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            text-align: center;
+            margin-bottom: 10px;
+            transition: background-color 0.3s;
+        }
+
+        .btn-brilliant {
+            background-color: #188ade; /* Brilliant Blue */
+            color: #ffffff;
+        }
+
+        .btn-brilliant:hover {
+            background-color: #156cb3;
+        }
+
+        .btn-yellow {
+            background-color: #ffc107;
+            color: #1a237e;
+        }
+
+        .btn-red {
+            background-color: #d32f2f;
+            color: #ffffff;
+        }
+
+        .note-text {
+            font-size: 12px;
+            color: #666;
+            margin-top: -10px;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #1a237e;
+            padding: 15px;
+            text-align: center;
+            font-size: 12px;
+            color: #cccccc;
+        }
+
+        .footer a {
+            color: #188ade; /* Brilliant Blue link */
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Bottom Nav (Home, History, Settings) */
+        .bottom-nav {
+            display: flex;
+            justify-content: space-around;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #ffffff;
+            padding: 10px 0;
+            border-top: 1px solid #ccc;
+        }
+
+        .nav-item {
+            text-align: center;
+            color: #1a237e;
+            font-size: 12px;
+        }
+        
+        /* Utility for hiding sections */
+        .hidden {
+            display: none;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>AGT SYSTEM</h1>
+        <p>Universal System of Global Governance & Planning</p>
+        <p>Representative: **davidgomadza** | Authorized by **YAHWEH**</p>
+    </div>
+
+    <div class="system-status">
+        <div class="status-card">
+            <strong>1</strong>
+            <span>MGIS Commands</span>
+        </div>
+        <div class="status-card">
+            <strong>1</strong>
+            <span>Human Shells</span>
+        </div>
+        <div class="status-card">
+            <strong>1</strong>
+            <span>Death Records</span>
+        </div>
+        <div class="status-card">
+            <strong>0</strong>
+            <span>Seals Approved</span>
+        </div>
+        <div class="status-card" style="width: 100%;">
+            <strong>0</strong>
+            <span>Yahweh Tasks</span>
+        </div>
+    </div>
+
+    <div class="content-area">
+        <div class="nav-tabs">
+            <div class="nav-tab active" data-target="overview">Overview</div>
+            <div class="nav-tab" data-target="mgis">1. MGIS</div>
+            <div class="nav-tab" data-target="mgiscre">2. MGISCRE</div>
+            <div class="nav-tab" data-target="human-shell">3. Human Shell</div>
+            <div class="nav-tab" data-target="death-system">4. Death System</div>
+            <div class="nav-tab" data-target="afterlife">5. Afterlife</div>
+            <div class="nav-tab" data-target="seal">6. Seal</div>
+            <div class="nav-tab" data-target="wallet">11. AGT Wallet</div> <div class="nav-tab" data-target="longevity">7. Longevity</div>
+            <div class="nav-tab" data-target="cure-death">8. Cure Death</div>
+            <div class="nav-tab" data-target="tasks">9. Tasks</div>
+            <div class="nav-tab" data-target="creation">10. Creation</div>
+        </div>
+
+        <div class="system-section" id="overview">
+            <h2>AGT System Overview</h2>
+            <h3>17 Integrated Subsystems</h3>
+            <ul class="subsystem-list">
+                <li>MGIS - Main communication system</li>
+                <li>MGISCRE - Enhanced CREATE+MGIS</li>
+                <li>Human Shell - Immortality preservation (DNA 53BILLION800)</li>
+                <li>Death Processing - Longago calculations</li>
+                <li>Afterlife Navigation - Heaven (ZMQ), Hell (UUQT), Abyss (EEKNM)</li>
+                <li>Seal of Approval - Cure for death certification</li>
+                <li>Living 10000 Years - Longevity protocols</li>
+                <li>Cure for Death Formula - Body system resets</li>
+                <li>Yahweh's Tasks - 128 tasks for davidgomadza</li>
+                <li>Creation Systems - Original & 2.0</li>
+                <li>**AGT Wallet - Send and Receive AGT (New)**</li>
+                <li>+ 6 more informational systems</li>
+            </ul>
+        </div>
+
+        <div class="system-section hidden" id="wallet">
+            <h2>💰 AGT 15-Alphabetic Wallet System</h2>
+
+            <h3>Current Balance</h3>
+            <input type="text" value="0.00 AGT" readonly style="font-weight: bold; text-align: right; color: #188ade;">
+            
+            <h3>Receive AGT</h3>
+            <p class="note-text" style="color: #1a237e;">Share this address to receive AGT.</p>
+            <input type="text" value="AGT-12345-ABCDE-FGHIJ" readonly style="font-weight: bold; color: #388e3c;">
+            <button class="btn btn-yellow">Generate QR Code</button>
+
+            <h3>Send AGT</h3>
+            <input type="text" placeholder="Recipient's 15-Alphabetic Wallet Address">
+            <input type="text" placeholder="Amount of AGT to Send">
+            <button class="btn btn-brilliant">Send AGT</button>
+        </div>
+
+        <div class="system-section hidden" id="mgis"><h2>1. MGIS - Main Communication System</h2><input type="text" value="mgis.ask.davidgomadza.start.yourcommand.start"><button class="btn btn-brilliant">Execute MGIS Command</button></div>
+        <div class="system-section hidden" id="mgiscre"><h2>2. MGISCRE - Enhanced CREATE+MGIS</h2><select><option>Presidential</option></select><input type="text" value="mgiscre.ask.davidgomadza.start.operation.start"><button class="btn btn-brilliant">Execute MGISCRE Command</button></div>
+        <div class="system-section hidden" id="human-shell"><h2>3. Human Shell System</h2><input type="text" placeholder="Enter person name"><button class="btn btn-brilliant">Create Human Shell</button></div>
+        <div class="system-section hidden" id="death-system"><h2>4. Death Processing System</h2><input type="text" placeholder="Enter person name"><button class="btn btn-red" style="width: 48%; float: left; margin-right: 4%;">Process Death</button><button class="btn btn-yellow" style="width: 48%; float: left;">Calculate Longago</button><div style="clear: both;"></div></div>
+        <div class="system-section hidden" id="afterlife"><h2>5. Afterlife Navigation</h2><input type="text" placeholder="Enter person name"><button class="btn btn-yellow" style="width: 31%; float: left; margin-right: 3%;">Heaven (ZMQ)</button><button class="btn btn-red" style="width: 31%; float: left; margin-right: 3%;">Hell (UUQT)</button><button class="btn btn-brilliant" style="width: 32%; float: left;">Abyss (EEKNM)</button><div style="clear: both;"></div></div>
+        <div class="system-section hidden" id="seal"><h2>6. Seal of Approval</h2><input type="text" placeholder="Enter person name"><button class="btn btn-brilliant">Grant Seal of Approval</button></div>
+        <div class="system-section hidden" id="longevity"><h2>7. Longevity Protocols</h2><p style="color: #1a237e;">Longevity system details would go here.</p></div>
+        <div class="system-section hidden" id="cure-death"><h2>8. Cure Death Formula</h2><p style="color: #1a237e;">Cure Death system details would go here.</p></div>
+        <div class="system-section hidden" id="tasks"><h2>9. Yahweh's Tasks</h2><p style="color: #1a237e;">Tasks list details would go here.</p></div>
+        <div class="system-section hidden" id="creation"><h2>10. Creation Systems</h2><p style="color: #1a237e;">Creation system details would go here.</p></div>
+
+    </div>
+
+    <div class="footer">
+        AGT System v1.0 | Tomorrow's World Order<br>
+        <a href="https://agt8000.life" target="_blank">**https://agt8000.life**</a><br>
+        Authorized by YAHWEH - Representative: davidgomadza
+    </div>
+
+    <div class="bottom-nav">
+        <div class="nav-item">🏠 Home</div>
+        <div class="nav-item">⏱ History</div>
+        <div class="nav-item">⚙ Settings</div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const tabs = document.querySelectorAll('.nav-tab');
+            const sections = document.querySelectorAll('.system-section');
+
+            const activateTab = (targetId) => {
+                // Deactivate all tabs and hide all sections
+                tabs.forEach(tab => tab.classList.remove('active'));
+                sections.forEach(section => section.classList.add('hidden'));
+
+                // Activate the selected tab
+                const activeTab = document.querySelector(`.nav-tab[data-target="${targetId}"]`);
+                if (activeTab) {
+                    activeTab.classList.add('active');
+                }
+
+                // Show the corresponding section
+                const activeSection = document.getElementById(targetId);
+                if (activeSection) {
+                    activeSection.classList.remove('hidden');
+                }
+            };
+
+            tabs.forEach(tab => {
+                tab.addEventListener('click', (event) => {
+                    const targetId = event.target.getAttribute('data-target');
+                    activateTab(targetId);
+                });
+            });
+
+            // Initialize to show the 'overview' section
+            // Note: If you want to show the Wallet section first, change 'overview' to 'wallet'
+            activateTab('overview');
+        });
+    </script>
+</body>
+</html>
